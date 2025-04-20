@@ -19,7 +19,7 @@ import java.util.Map;
 @Service
 public class EmbeddingService {
     @Autowired
-    private RestTemplate template=new RestTemplate();
+    private final RestTemplate template=new RestTemplate();
     private static final Logger logger = LoggerFactory.getLogger(EmbeddingService.class);
 
     public Embedding get_embedding(String abstractText){

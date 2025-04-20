@@ -27,7 +27,7 @@ public class EmbeddingGenerator {
 
     @PostMapping("/embedding")
     public List<Double> getEmbedding(@RequestBody Map<String,String> abstractText){
-        logger.info("The coontroller is being called");
+        logger.info("The controller is being called");
         Embedding em= embeddingService.get_embedding(abstractText.get("abstract"));
         System.out.println("Hello this is controller");
         System.out.println(em.getEmbedding().size());
